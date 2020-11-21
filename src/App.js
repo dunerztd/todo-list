@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Form from './components/Form'
+import TodoList from './components/TodoList'
+
 
 const App = () => {
+
+  
+  const [todoList, setTodoList] = useState([])
+
+
   return (
     <div >
-          The basic empty template
+      <Form todoList={todoList} setTodoList={setTodoList} />
+      <TodoList todoList={todoList} setTodoList={setTodoList} />
     </div>
   )
 }
